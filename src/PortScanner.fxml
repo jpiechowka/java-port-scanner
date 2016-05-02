@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<TabPane prefHeight="500.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController">
+  <tabs>
+    <Tab text="Host Discovery">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <TableView fx:id="hostDiscoveryResultsTable" layoutX="30.0" layoutY="18.0" prefWidth="411.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+                      <placeholder>
+                          <Label text="Start Host Discovery To Display Results" />
+                      </placeholder>
+                    <columns>
+                      <TableColumn fx:id="hostDiscoveryResultIPTableColumn" editable="false" minWidth="100.0" prefWidth="150.0" text="Host IP Address" />
+                      <TableColumn fx:id="hostDiscoveryResultHostnameTableColumn" editable="false" minWidth="150.0" prefWidth="250.0" text="Hostname" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="hostDiscoveryButton" layoutX="470.0" layoutY="370.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Start Host Discovery" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                  <Label layoutX="512.0" layoutY="30.0" text="Threads" AnchorPane.rightAnchor="146.0" />
+                  <Slider fx:id="hostDiscoveryThreadsSlider" blockIncrement="5.0" layoutX="489.0" layoutY="60.0" majorTickUnit="5.0" min="1.0" minorTickCount="1" orientation="VERTICAL" prefHeight="270.0" prefWidth="25.0" value="20.0" AnchorPane.rightAnchor="155.0" />
+                  <Label fx:id="hostDiscoveryThreadsSliderLabel" alignment="CENTER" layoutX="503.0" layoutY="345.0" prefHeight="20.0" prefWidth="60.0" text="20" AnchorPane.rightAnchor="137.0" />
+                  <Label layoutX="573.0" layoutY="30.0" text="Timeout [ms]" AnchorPane.rightAnchor="57.0" />
+                  <Slider fx:id="hostDiscoveryTimeoutSlider" layoutX="584.0" layoutY="60.0" majorTickUnit="10.0" max="1000.0" min="250.0" minorTickCount="5" orientation="VERTICAL" prefHeight="270.0" prefWidth="25.0" value="750.0" AnchorPane.rightAnchor="80.0" />
+                  <Label fx:id="hostDiscoveryTimeoutSliderLabel" alignment="CENTER" layoutX="578.0" layoutY="345.0" prefHeight="20.0" prefWidth="60.0" text="750" AnchorPane.rightAnchor="62.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Port Scan">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <TableView fx:id="portScanResultsTable" layoutX="97.0" layoutY="229.0" prefHeight="230.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                      <placeholder>
+                          <Label text="No Results" />
+                      </placeholder>
+                    <columns>
+                      <TableColumn fx:id="portScanResultPortNumberTableColumn" minWidth="100.0" prefWidth="150.0" text="Port Number" />
+                      <TableColumn fx:id="portScanResultDescriptionTableColumn" minWidth="250.0" prefWidth="450.0" text="Description" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="portScanButton" layoutX="30.0" layoutY="155.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="320.0" text="Scan" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="155.0" />
+                  <Label alignment="CENTER" layoutX="30.0" layoutY="25.0" prefHeight="35.0" prefWidth="48.0" text="Target IP" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="25.0" />
+                  <TextField fx:id="portScanIPAddressTextField" layoutX="100.0" layoutY="32.0" prefHeight="25.0" prefWidth="210.0" promptText="EXAMPLE: 192.168.0.1" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="30.0" />
+                  <Label layoutX="31.0" layoutY="74.0" text="Starting Port" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="74.0" />
+                  <TextField fx:id="portScanStartPortTextField" layoutX="140.0" layoutY="70.0" prefHeight="25.0" prefWidth="210.0" promptText="MIN: 1" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="70.0" />
+                  <Label layoutX="33.0" layoutY="114.0" text="Ending Port" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="114.0" />
+                  <TextField fx:id="portScanEndPortTextField" layoutX="140.0" layoutY="110.0" prefHeight="25.0" prefWidth="210.0" promptText="MAX: 65535" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="110.0" />
+                  <Label alignment="CENTER" layoutX="484.0" layoutY="47.0" text="Threads" AnchorPane.rightAnchor="174.0" AnchorPane.topAnchor="47.0" />
+                  <Slider fx:id="portScanThreadsSlider" layoutX="380.0" layoutY="76.0" majorTickUnit="5.0" max="250.0" min="1.0" minorTickCount="1" prefHeight="14.0" prefWidth="250.0" value="20.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="76.0" />
+                  <Label fx:id="portScanThreadsSliderLabel" alignment="CENTER" layoutX="630.0" layoutY="66.0" prefHeight="35.0" prefWidth="48.0" text="20" AnchorPane.rightAnchor="20.0" />
+                  <Label alignment="CENTER" layoutX="470.0" layoutY="147.0" text="Timeout [ms]" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="147.0" />
+                  <Slider fx:id="portScanTimeoutSlider" layoutX="380.0" layoutY="116.0" max="5000.0" min="250.0" minorTickCount="5" prefHeight="14.0" prefWidth="250.0" value="1500.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="116.0" />
+                  <Label fx:id="portScanTimeoutSliderLabel" alignment="CENTER" layoutX="630.0" layoutY="105.0" prefHeight="35.0" prefWidth="48.0" text="1500" AnchorPane.rightAnchor="20.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
