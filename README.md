@@ -7,7 +7,9 @@ You can download latest release from [Releases Page] (https://github.com/piechow
 #Usage 
 ###Host Discovery
 
-This tab is used for discovering hosts on LAN. You can specify desired timeout and number of threads. It uses **.isReachable()** method to detect online devices. Sometimes it will fail to detect online hosts. Try increasing timeout and running again to solve this problem. Take note that increasing threads will produce more network load. Some firewalls may block your connection.
+This tab is used for discovering hosts on LAN
+
+You can specify desired timeout and number of threads. It uses **.isReachable()** method to detect online devices. Sometimes it will fail to detect online hosts. Try increasing timeout and running again to solve this problem. Take note that increasing threads will produce more network load. Some firewalls may block your connection.
 
 ###Port Scan
 This tab is used for port scanning
