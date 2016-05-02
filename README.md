@@ -5,7 +5,7 @@ Port Scanner created using Java with GUI in JavaFX
 You can download latest release from [Releases Page] (https://github.com/piechowka/JavaPortScanner/releases)
 
 #Usage 
-**Make sure you have latest JRE installed**
+####Make sure you have latest JRE installed####
 
 ###Host Discovery
 
