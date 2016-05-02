@@ -14,7 +14,7 @@ You can specify desired timeout and number of threads. It uses **.isReachable()*
 ###Port Scan
 This tab is used for port scanning
 
-**Trget IP** is the IP address to scan. Make sure to enter it properly
+**Target IP** is the IP address to scan. Make sure to enter it properly
 
 **Starting Port** is the first port that will be scanned. Must be in range: 1 - 65534
 
